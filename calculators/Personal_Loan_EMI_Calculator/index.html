@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <title>Personal Loan EMI Calculator</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js" defer></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Personal Loan EMI Calculator</h1>
+            <p>Calculate your monthly EMI for a personal loan.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <div class="form-field">
+                    <label for="loan-amount">Principal Amount (₹):</label>
+                    <input type="number" id="loan-amount" required />
+                </div>
+                <div class="form-field">
+                    <label for="interest-rate">Annual Interest Rate (%):</label>
+                    <input type="number" id="interest-rate" step="0.01" required />
+                </div>
+                <div class="form-field">
+                    <label for="loan-tenure">Loan Tenure (Years):</label>
+                    <input type="number" id="loan-tenure" required />
+                </div>
+                <div class="form-field">
+                    <label for="processing-fees">Processing Fees (₹, optional):</label>
+                    <input type="number" id="processing-fees" />
+                </div>
+                <button id="calculate-button">Calculate EMI</button>
+            </div>
+
+            <div class="result">
+                <h2>Results</h2>
+                <div id="output">
+                    <p><strong>Monthly EMI: </strong><span id="emi-output">₹0.00</span></p>
+                    <p><strong>Total Amount Payable: </strong><span id="total-output">₹0.00</span></p>
+                    <p><strong>Total Interest Paid: </strong><span id="interest-output">₹0.00</span></p>
+                </div>
+            </div>
+
+            <div id="amortization-table-container">
+                <h2>Amortization Schedule</h2>
+                <table id="amortization-table">
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Principal Payment (₹)</th>
+                            <th>Interest Payment (₹)</th>
+                            <th>Total Payment (₹)</th>
+                            <th>Remaining Balance (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

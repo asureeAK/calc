@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Term Insurance Calculator</title>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Term Insurance Calculator</h1>
+            <p>Estimate your term insurance premium based on various factors.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <div class="form-field">
+                    <label for="age">Age of the Insured:</label>
+                    <input type="number" id="age" min="0" required />
+                </div>
+                <div class="form-field">
+                    <label for="annual-income">Annual Income:</label>
+                    <select id="annual-income" required>
+                        <option value="" disabled selected>Select Income</option>
+                        <option value="200000">₹2,00,000</option>
+                        <option value="300000">₹3,00,000</option>
+                        <option value="400000">₹4,00,000</option>
+                        <option value="500000">₹5,00,000</option>
+                        <option value="600000">₹6,00,000</option>
+                        <option value="700000">₹7,00,000</option>
+                        <option value="800000">₹8,00,000</option>
+                        <option value="900000">₹9,00,000</option>
+                        <option value="1000000">₹10,00,000</option>
+                        <option value="1200000">₹12,00,000</option>
+                        <option value="1400000">₹14,00,000</option>
+                        <option value="1600000">₹16,00,000</option>
+                        <option value="1800000">₹18,00,000</option>
+                        <option value="2000000">₹20,00,000</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="policy-term">Policy Term (Years):</label>
+                    <input type="number" id="policy-term" min="1" required />
+                </div>
+                <div class="form-field">
+                    <label for="gender">Gender:</label>
+                    <select id="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <label for="smoking-status">Smoking Status:</label>
+                    <select id="smoking-status">
+                        <option value="non-smoker">Non-Smoker</option>
+                        <option value="smoker">Smoker</option>
+                    </select>
+                </div>
+                <button id="calculate-button">Calculate Premium</button>
+            </div>
+
+            <div class="result" id="result-container" style="display:none;">
+                <h2>Results</h2>
+                <div id="output">
+                    <p><strong>Minimum Coverage Amount: </strong><span id="coverage-amount-output">₹0.00</span></p>
+                    <p><strong>Estimated Annual Premium: </strong><span id="annual-premium-output">₹0.00</span></p>
+                    <p><strong>Estimated Monthly Premium: </strong><span id="monthly-premium-output">₹0.00</span></p>
+                    <p><strong>Total Premium Paid: </strong><span id="total-premium-paid-output">₹0.00</span></p>
+                    <p><strong>Next Year's Premium (if skipped): </strong><span id="next-year-premium-output">₹0.00</span></p> <!-- Added output for next year's premium -->
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <title>Investment Return Calculator - Power of Compounding</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Link to Chart.js -->
+    <script src="scripts.js" defer></script> <!-- Link to JavaScript file -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Investment Return Calculator</h1>
+            <p>Discover the power of compounding for your investments.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <div class="form-field">
+                    <label for="initial-investment">Initial Investment Amount (₹):</label>
+                    <input type="number" id="initial-investment" required />
+                </div>
+                <div class="form-field">
+                    <label for="annual-rate">Annual Interest Rate (%):</label>
+                    <input type="number" id="annual-rate" step="0.01" required />
+                </div>
+                <div class="form-field">
+                    <label for="investment-duration">Investment Duration (Years):</label>
+                    <input type="number" id="investment-duration" required />
+                </div>
+                <div class="form-field">
+                    <label for="compounding-frequency">Compounding Frequency:</label>
+                    <select id="compounding-frequency">
+                        <option value="1">Annually</option>
+                        <option value="4">Quarterly</option>
+                        <option value="12">Monthly</option>
+                        <option value="365">Daily</option>
+                    </select>
+                </div>
+                <button id="calculate-button">Calculate Return</button>
+            </div>
+
+            <div class="result">
+                <h2>Results</h2>
+                <div id="output">
+                    <p><strong>Initial Investment Amount: </strong><span id="initial-investment-output">₹0.00</span></p>
+                    <p><strong>Final Amount: </strong><span id="final-amount-output">₹0.00</span></p>
+                    <p><strong>Total Interest Earned: </strong><span id="total-interest-output">₹0.00</span></p>
+                </div>
+            </div>
+
+            <div id="graph-container">
+                <canvas id="investmentGraph"></canvas>
+            </div>
+
+            <div id="table-container">
+                <h2>Investment Growth Table</h2>
+                <table id="investment-table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Amount (₹)</th>
+                            <th>Interest Earned (₹)</th>
+                            <th>Total Amount (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light background */
+}
+
+header {
+    background-color: #007BFF; /* Header color */
+    color: white;
+    padding: 20px;
+    text-align: center; /* Center text */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+}
+
+main {
+    padding: 20px;
+}
+
+.calculator-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between cards */
+}
+
+.calculator-card {
+    background-color: white; /* Card color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside card */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center text inside cards */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.calculator-card:hover {
+    transform: translateY(-5px); /* Hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.calculator-icon {
+    font-size: 40px; /* Increase icon size */
+    margin-bottom: 10px; /* Space below icon */
+}
+
+.calculator-button {
+    display: inline-block; /* Inline-block for button */
+    padding: 10px 15px; /* Button padding */
+    background-color: #007BFF; /* Button color */
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded button */
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s; /* Transition for color */
+}
+
+.calculator-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+footer {
+    text-align: center; /* Center footer text */
+    margin-top: 40px; /* Space above footer */
+    padding: 20px; /* Padding inside footer */
+    background-color: #007BFF; /* Footer color */
+    color: white; /* Footer text color */
+}

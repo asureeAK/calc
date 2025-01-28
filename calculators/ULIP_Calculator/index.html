@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>ULIP Calculator</title>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ULIP Calculator</h1>
+            <p>Estimate your returns on Unit Linked Insurance Plans.</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="calculator-container">
+            <div class="calculator-form">
+                <div class="form-field">
+                    <label for="monthly-investment">Monthly Investment Amount (₹):</label>
+                    <input type="number" id="monthly-investment" required />
+                </div>
+                <div class="form-field">
+                    <label for="annual-return">Expected Annual Return Rate (%):</label>
+                    <input type="number" id="annual-return" step="0.01" required />
+                </div>
+                <div class="form-field">
+                    <label for="investment-duration">Investment Duration (Years):</label>
+                    <input type="number" id="investment-duration" required />
+                </div>
+                <div class="form-field">
+                    <label for="insurance-coverage">Insurance Coverage (Sum Assured) (₹) (optional):</label>
+                    <input type="text" id="insurance-coverage" placeholder="1,00,000" />
+                </div>
+                <button id="calculate-button">Calculate ULIP Returns</button>
+            </div>
+
+            <div class="result" id="result-container" style="display:none;">
+                <h2>Results</h2>
+                <div id="output">
+                    <p><strong>Total Amount Invested: </strong><span id="total-invested-output">₹0.00</span></p>
+                    <p><strong>Future Value of Investment: </strong><span id="future-value-output">₹0.00</span></p>
+                    <p><strong>Total Insurance Coverage: </strong><span id="insurance-coverage-output">₹0.00</span></p>
+                    <p><strong>Total Gains: </strong><span id="total-gains-output">₹0.00</span></p>
+                    <p><strong>Total Payout (Future Value + Sum Assured): </strong><span id="total-payout-output">₹0.00</span></p>
+                    <p><strong>Total Payout in Words: </strong><span id="total-payout-words">zero</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Calculator Hub. All rights reserved.</p>
+    </footer>
+</body>
+</html>
